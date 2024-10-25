@@ -106,13 +106,13 @@ clean-test: ## Delete the pytest cache files.
 .PHONY: clean-test
 
 check-codestyle:  ## Check the style of the code.
-	pycodestyle .
+	pycodestyle code
 .PHONY: check-codestyle
 
 check-docstyle:  ## Check the style of the docstrings.
-	pydocstyle . --match='.*\.py'
+	pydocstyle code --match='.*\.py'
 .PHONY: check-docstyle
 
 check-security:  ## Checks for common security vulnerabilities.
-	bandit -c bandit.yaml -r .
+	bandit -c bandit.yaml -r code
 .PHONY: check-security
