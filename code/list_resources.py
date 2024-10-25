@@ -1,4 +1,5 @@
-from helpers import *  # Assuming the required functions (list_buckets, describe_instances, get_ec2_client, get_s3_client) are in this module
+from helpers import *  # Assuming the required functions are in this module.
+
 
 def print_bucket_names(s3_client: object) -> None:
     """
@@ -8,10 +9,11 @@ def print_bucket_names(s3_client: object) -> None:
         s3_client (object): The S3 client used to list and access S3 buckets.
     """
     bucket_names = list_buckets(s3_client)
-    
+
     # Print elements of the list. Could also be done with '\n'.join(bucket_names)
     for bucket_name in bucket_names:
         print(bucket_name)
+
 
 def print_instance_ids(ec2_client: object) -> None:
     """
