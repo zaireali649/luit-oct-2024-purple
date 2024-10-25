@@ -13,11 +13,14 @@ def create_amazon_linux_2023_instance(client):
 def create_amazon_linux_2_instance(client):
     return 0
 
+
 def list_buckets(client):
     return 0
 
+
 def describe_instances(client):
     return 0
+
 
 def get_s3_client(client):
     return 0
