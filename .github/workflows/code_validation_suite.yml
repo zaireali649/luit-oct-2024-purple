@@ -28,3 +28,4 @@ jobs:
           pip install pip-tools
           make dependencies test-dependencies doc-dependencies
           make check-codestyle check-docstyle check-security
+          make build-docs
