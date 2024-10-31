@@ -1,10 +1,10 @@
+"""Lambda to list buckets from S3."""
 import boto3
 from typing import Any, Dict
 
 
 def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
-    """
-    AWS Lambda handler function to list all S3 bucket names.
+    """AWS Lambda handler function to list all S3 bucket names.
 
     This function retrieves the names of all S3 buckets in the AWS account
     and returns them in the response body as a newline-separated string.

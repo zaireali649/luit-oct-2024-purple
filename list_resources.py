@@ -1,9 +1,9 @@
+"""Script to list AWS resources."""
 from helpers import *  # Assuming the required functions are in this module.
 
 
 def print_bucket_names(s3_client: object) -> None:
-    """
-    Prints the names of all S3 buckets associated with the provided S3 client.
+    """Prints the names of all S3 buckets associated with the provided S3 client.
 
     Args:
         s3_client (object): The S3 client used to list and access S3 buckets.
@@ -16,8 +16,7 @@ def print_bucket_names(s3_client: object) -> None:
 
 
 def print_instance_ids(ec2_client: object) -> None:
-    """
-    Prints the instance IDs of all EC2 instances associated with the provided EC2 client.
+    """Prints the instance IDs of all EC2 instances associated with the provided EC2 client.
 
     Args:
         ec2_client (object): The EC2 client used to describe EC2 instances.

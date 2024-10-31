@@ -1,3 +1,4 @@
+"""Script for printing VPC Ids from AWS."""
 import boto3
 
 vpc_client = boto3.client('ec2')

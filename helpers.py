@@ -1,9 +1,9 @@
+"""Helper functions to connect to AWS."""
 import boto3  # Import the Boto3 library to interact with AWS services
 
 
 def get_ec2_client() -> boto3.client:
-    """
-    Creates and returns an EC2 client using Boto3.
+    """Creates and returns an EC2 client using Boto3.
 
     Returns:
         boto3.client: The EC2 client.
@@ -12,8 +12,7 @@ def get_ec2_client() -> boto3.client:
 
 
 def get_s3_client() -> boto3.client:
-    """
-    Creates and returns an S3 client using Boto3.
+    """Creates and returns an S3 client using Boto3.
 
     Returns:
         boto3.client: The S3 client.
@@ -22,8 +21,7 @@ def get_s3_client() -> boto3.client:
 
 
 def describe_instances(client: boto3.client) -> list:
-    """
-    Describes EC2 instances and returns a list of instances.
+    """Describes EC2 instances and returns a list of instances.
 
     Args:
         client (boto3.client): The EC2 client used to describe instances.
@@ -39,8 +37,7 @@ def describe_instances(client: boto3.client) -> list:
 
 
 def create_ubuntu_instance(client: boto3.client) -> None:
-    """
-    Creates an Ubuntu EC2 instance.
+    """Creates an Ubuntu EC2 instance.
 
     Args:
         client (boto3.client): The EC2 client used to create the instance.
@@ -52,8 +49,7 @@ def create_ubuntu_instance(client: boto3.client) -> None:
 
 
 def create_amazon_linux_2023_instance(client: boto3.client) -> None:
-    """
-    Creates an Amazon Linux 2023 EC2 instance.
+    """Creates an Amazon Linux 2023 EC2 instance.
 
     Args:
         client (boto3.client): The EC2 client used to create the instance.
@@ -65,8 +61,7 @@ def create_amazon_linux_2023_instance(client: boto3.client) -> None:
 
 
 def create_amazon_linux_2_instance(client: boto3.client) -> None:
-    """
-    Creates an Amazon Linux 2 EC2 instance.
+    """Creates an Amazon Linux 2 EC2 instance.
 
     Args:
         client (boto3.client): The EC2 client used to create the instance.
@@ -78,8 +73,7 @@ def create_amazon_linux_2_instance(client: boto3.client) -> None:
 
 
 def create_instance(client: boto3.client, ami: str) -> None:
-    """
-    Creates an EC2 instance with the specified AMI.
+    """Creates an EC2 instance with the specified AMI.
 
     Args:
         client (boto3.client): The EC2 client used to create the instance.
@@ -98,8 +92,7 @@ def create_instance(client: boto3.client, ami: str) -> None:
 
 
 def list_buckets(s3_client: boto3.client) -> list:
-    """
-    Lists the names of all S3 buckets.
+    """Lists the names of all S3 buckets.
 
     Args:
         s3_client (boto3.client): The S3 client used to list buckets.
