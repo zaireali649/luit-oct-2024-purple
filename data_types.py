@@ -1,7 +1,14 @@
 """Script to test various data types."""
 from datetime import datetime  # Importing the datetime module to work with dates and times
 
-def main():
+
+def main() -> None:
+    """Demonstrates type conversions and type checking for various data types.
+
+    Prompts the user for input, casts types between string, integer, and float,
+    and prints the type of each variable at each step, including the current
+    date and time retrieved using the `datetime` module.
+    """
     var = "These are words."  # Defining a string variable
     print(type(var))  # Printing the type of var, which will be <class 'str'>
 
@@ -21,6 +28,7 @@ def main():
     var6 = datetime.now()  # Getting the current date and time
     print(var6)  # Printing the current date and time
     print(type(var6))  # Printing the type of var6, which will be <class 'datetime.datetime'>
+
 
 if __name__ == "__main__":
     main()
