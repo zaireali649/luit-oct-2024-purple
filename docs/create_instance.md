@@ -1,3 +1,3 @@
-# create_instances Module
+# create_instance Module
 
-::: create_instances
+::: create_instance
