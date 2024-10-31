@@ -1,1 +1,3 @@
 skips: ['B102', 'B311']
+exclude_dirs:
+  - venv
