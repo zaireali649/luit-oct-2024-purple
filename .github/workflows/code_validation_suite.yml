@@ -1,0 +1,31 @@
+name: Code Validation Suite
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+jobs:
+  code-and-doc-style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install and Run checks
+        run: |
+          python -m venv venv
+          echo "venv" >> $GITHUB_PATH
+          source venv/bin/activate
+          python -m pip install --upgrade pip setuptools wheel
+          pip install pip-tools
+          make dependencies test-dependencies doc-dependencies
+          make check-codestyle check-docstyle check-security
+          make build-docs

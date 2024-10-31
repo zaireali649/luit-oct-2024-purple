@@ -1,9 +1,9 @@
+"""Script to create an EC2 instance."""
 from helpers import *
 
 
 def create_instances(client: 'boto3.client', ami_type: str, instance_amount: int = 1) -> None:
-    """
-    Creates EC2 instances based on the specified AMI type.
+    """Creates EC2 instances based on the specified AMI type.
 
     Args:
         client (boto3.client): The EC2 client used to create instances.
@@ -13,7 +13,6 @@ def create_instances(client: 'boto3.client', ami_type: str, instance_amount: int
     Returns:
         None
     """
-
     # Loop through the number of instances to create
     for i in range(instance_amount):
         # Normalize ami_type by converting to lowercase and removing extra spaces

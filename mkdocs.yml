@@ -1,0 +1,35 @@
+site_name: LUIT Oct 2024 Purple
+repo_url: https://github.com/zaireali649/luit-oct-2024-purple
+site_author: Purple Cohort
+site_description: Level Up In Tech Oct 2024 Purple Documentation
+copyright: 2024, Level Up In Tech
+use_directory_urls: false
+theme:
+  name: "material"
+  features:
+    - navigation.indexes
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - codehilite:
+      guess_lang: true
+plugins:
+  - search
+  - mkdocstrings
+  - include-markdown
+  - offline:
+      enabled: !ENV [ OFFLINE, false ]
+nav:
+  - Home: index.md
+  - Code: 
+      - create_instance.md
+      - data_types.md
+      - hello_world.md
+      - helpers.md
+      - imports.md
+      - list_buckets_lambda.md
+      - list_buckets.md
+      - list_cron_expressions.md
+      - list_resources.md
+      - vpc_ids.md

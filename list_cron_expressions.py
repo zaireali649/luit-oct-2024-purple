@@ -1,3 +1,4 @@
+"""Listing Schedule Expressions from AWS EventBridge."""
 import boto3
 
 eventbridge = boto3.client('events')
